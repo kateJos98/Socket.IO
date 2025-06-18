@@ -3,7 +3,7 @@ const http = require('http');
 
 const server = http.createServer();
 const io = new Server(server, {
-  cors: { origin: '*' } // para permitir conexiones desde cualquier origen, útil en desarrollo
+  cors: { origin: '*' } // Permitir cualquier origen (para desarrollo)
 });
 
 io.on('connection', socket => {
@@ -13,7 +13,6 @@ io.on('connection', socket => {
 
   socket.on('message', msg => {
     console.log('Received:', msg.toString());
-    // Puedes responder al cliente
     socket.emit('message', `Server received: ${msg.toString()}`);
   });
 
@@ -23,5 +22,4 @@ io.on('connection', socket => {
 });
 
 const PORT = process.env.PORT || 3005;
-
 server.listen(PORT, () => console.log(`Hello from Socket.IO listener on port ${PORT}`));

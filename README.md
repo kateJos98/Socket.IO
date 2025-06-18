@@ -11,7 +11,7 @@ node server.js
 ## 🐳 Run with Docker
 ```bash
 docker build -t katyjoseth719/socketio-server .
-docker run -p 3004:3004 --name socketio-server katyjoseth719/socketio-server
+docker run -p 3005:3005 --name socketio-server katyjoseth719/socketio-server
 ```
 ## 📡 Test with a client
 ```bash
