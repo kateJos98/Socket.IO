@@ -14,7 +14,7 @@ docker build -t katyjoseth719/socketio-server .
 docker run -p 3004:3004 --name socketio-server katyjoseth719/socketio-server
 ```
 ## 📡 Test with a client
-
+```bash
 const socket = io('http://localhost:3004');
 socket.on('message', msg => console.log('Server says:', msg));
 socket.emit('message', 'Hello Server!');
